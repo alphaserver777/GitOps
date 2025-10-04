@@ -1,5 +1,6 @@
-{ lib, hostname, ... }: {
+{ lib, pkgs, hostname, ... }: {
   wayland.windowManager.hyprland = {
+    plugins = [ pkgs.hyprexpo ];
     enable = true;
     systemd.enable = true;
     settings = {
